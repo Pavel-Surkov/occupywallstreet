@@ -1,7 +1,7 @@
 .menu {
 	position: fixed;
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	left: 0;
 	top: 0;
 	background: $black-100;
@@ -10,16 +10,18 @@
 	transform: translateX(100%);
 	transition: 0.5s;
 	&_active {
-		display: block;
 		transform: translateX(0);
 	}
+	&-wrapper {
+		margin-top: 160px;
+		overflow: hidden;
+	}
 	&-nav {
-		margin-top: 100px;
 		@include flex(column, center);
 		&__link {
 			font-size: 2rem;
 			line-height: 1.4;
-			margin-bottom: 30px;
+			margin-bottom: 35px;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -51,6 +53,14 @@
 		&__wrapper {
 			height: 92%;
 			@include flex(column, flex-end, center);
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.menu {
+		&-wrapper {
+			margin-top: 120px;
 		}
 	}
 }
