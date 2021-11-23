@@ -1,0 +1,57 @@
+.menu {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	left: 0;
+	top: 0;
+	background: $black-100;
+	z-index: 5;
+	overflow: scroll;
+	transform: translateX(100%);
+	transition: 0.5s;
+	&_active {
+		display: block;
+		transition: 0.5s;
+		transform: translateX(0);
+	}
+	&-nav {
+		margin-top: 100px;
+		@include flex(column, center);
+		&__link {
+			font-size: 2rem;
+			line-height: 1.4;
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&-btn {
+		width: 28px;
+		height: 22px;
+		position: relative;
+		&:hover {
+			opacity: 0.85;
+		}
+		& span {
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			background: $white;
+			left: 0;
+			&:first-child {
+				top: 0;
+			}
+			&:nth-child(2) {
+				top: calc(50% - 1px);
+			}
+			&:last-child {
+				bottom: 0;
+			}
+		}
+		&__wrapper {
+			height: 92%;
+			@include flex(column, flex-end, center);
+		}
+	}
+}
