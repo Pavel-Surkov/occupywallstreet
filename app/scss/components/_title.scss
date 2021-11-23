@@ -1,0 +1,44 @@
+.title {
+	margin: 0;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: $white;
+	&_size {
+		&-xl {
+			font-size: 10.4rem;
+			line-height: 1.08;
+		}
+		&-l {
+			font-size: 8.8rem;
+			line-height: 1.091;
+		}
+		&-m {
+			font-size: 5.6rem;
+			line-height: 1.43;
+		}
+	}
+}
+
+@media screen and (max-width: 1316px) {
+	.title {
+		&_size {
+			&-xl {
+				font-size: 7.2rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.title {
+		&_size {
+			&-xl {
+				font-size: 4.8rem;
+			}
+			&-l {
+				font-size: 4rem;
+				line-height: 1.2;
+			}
+		}
+	}
+}

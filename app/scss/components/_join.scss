@@ -1,0 +1,53 @@
+.join {
+	position: relative;
+	& svg:first-child {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: -276;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 124px;
+		right: -395px;
+		width: 1366px;
+		height: 772px;
+		background: image('home-pic@2x.png') no-repeat center center;
+		background-size: 100% 100%;
+	}
+	&-content {
+		margin: 240px 0;
+		margin-bottom: 282px;
+		position: relative;
+		z-index: 2;
+		&__text {
+			margin-top: 24px;
+			max-width: 758px;
+		}
+		&__link {
+			margin-top: 32px;
+		}
+	}
+}
+
+@media screen and (max-width: 1780px) {
+	.join {
+		&::after {
+			width: 1000px;
+			height: 565px;
+			top: 170px;
+			right: -285px;
+		}
+	}
+}
+
+@media screen and (max-width: 1316px) {
+	.join {
+		&::after {
+			width: 800px;
+			height: 452px;
+			right: -230px;
+		}
+	}
+}
