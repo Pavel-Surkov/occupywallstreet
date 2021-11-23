@@ -1,16 +1,22 @@
 .claim {
-	position: relative;
-	& svg:first-child {
-		position: absolute;
-		top: 170px;
-		right: -30px;
+	& .container {
+		position: relative;
+		& svg:first-child {
+			position: absolute;
+			top: 170px;
+			right: -80px;
+		}
 	}
 	&-img {
-		margin: 265px 0;
-		margin-bottom: 212px;
+		margin-top: 80px;
 	}
 	&-content {
-		margin-top: 178px;
+		position: relative;
+		z-index: 1;
+		&__wrapper {
+			margin: 178px 0;
+			margin-bottom: 186px;
+		}
 		&__title {
 			& span:last-child {
 				margin-left: 115px;
@@ -21,6 +27,114 @@
 			@include flex(row, flex-start, space-between);
 			& p {
 				width: calc(50% - 12px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1780px) {
+	.claim {
+		& .container {
+			& svg:first-child {
+				top: 240px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1316px) {
+	.claim {
+		&-content {
+			&__title {
+				& span:last-child {
+					margin: 0;
+				}
+			}
+			&__text {
+				display: block;
+				& p {
+					width: 100%;
+					margin-bottom: 16px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.claim {
+		& .container {
+			& svg:first-child {
+				top: 60px;
+				width: 402px;
+				height: 402px;
+			}
+		}
+		&-content {
+			&__wrapper {
+				margin: 56px 0;
+				margin-bottom: 112px;
+			}
+			&__title {
+				& span:last-child {
+					margin-left: 52px;
+				}
+			}
+		}
+		&-img {
+			margin-top: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.claim {
+		& .container {
+			& svg:first-child {
+				top: 320px;
+				right: -40px;
+				& circle {
+					fill-opacity: 0.18;
+				}
+			}
+		}
+		&-img {
+			margin: 0;
+			margin-bottom: 32px;
+		}
+		&-content {
+			&__text {
+				margin-top: 24px;
+			}
+			&__link {
+				margin-top: 32px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.claim {
+		& .container {
+			& svg:first-child {
+				z-index: 3;
+				top: 170px;
+				right: -70px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.claim {
+		&-content {
+			&__title {
+				& span:last-child {
+					margin-left: 35px;
+				}
 			}
 		}
 	}

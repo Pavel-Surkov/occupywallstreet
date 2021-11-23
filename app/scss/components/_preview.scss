@@ -21,3 +21,13 @@
 		color: $white-100;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.preview {
+		padding-bottom: 10px;
+		&-title {
+			font-size: 1.4rem;
+			line-height: 1.57;
+		}
+	}
+}

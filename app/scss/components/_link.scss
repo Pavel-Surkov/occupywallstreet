@@ -64,6 +64,22 @@
 				width: 244px;
 			}
 		}
+		&:active {
+			color: $dark-green;
+			& span:last-child {
+				background: $dark-green;
+				transition: none;
+				&::before,
+				&::after {
+					background: $dark-green;
+				}
+			}
+			& span:first-child {
+				&::before {
+					background: $dark-green;
+				}
+			}
+		}
 	}
 	&:hover {
 		color: $green-400;

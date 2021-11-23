@@ -62,14 +62,14 @@
 		& svg:first-child {
 			width: 500px;
 			height: 500px;
-			top: -90px;
+			top: -60px;
 			left: 0;
 		}
 		&::after {
-			width: 1000px;
-			height: 565px;
-			top: 210px;
-			right: -290px;
+			width: 800px;
+			height: 452px;
+			top: 290px;
+			right: -240px;
 		}
 		&-content {
 			margin: 48px 0;
@@ -107,7 +107,8 @@
 			width: 347px;
 			height: 347px;
 			top: -40px;
-			left: -10px;
+			left: -25px;
+			z-index: 3;
 		}
 		&::after {
 			width: 541px;
