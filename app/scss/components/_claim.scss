@@ -1,0 +1,27 @@
+.claim {
+	position: relative;
+	& svg:first-child {
+		position: absolute;
+		top: 170px;
+		right: -30px;
+	}
+	&-img {
+		margin: 265px 0;
+		margin-bottom: 212px;
+	}
+	&-content {
+		margin-top: 178px;
+		&__title {
+			& span:last-child {
+				margin-left: 115px;
+			}
+		}
+		&__text {
+			margin-top: 40px;
+			@include flex(row, flex-start, space-between);
+			& p {
+				width: calc(50% - 12px);
+			}
+		}
+	}
+}

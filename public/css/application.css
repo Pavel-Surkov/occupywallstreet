@@ -4173,7 +4173,8 @@ table {
     font-size: 2rem;
     line-height: 1.4;
     font-weight: 500;
-    position: relative; }
+    position: relative;
+    margin-top: 40px; }
     .link-arrow span:last-child {
       display: inline-block;
       position: relative;
@@ -4264,6 +4265,27 @@ table {
   .paragraph {
     font-size: 1.4rem;
     line-height: 1.57; } }
+
+.preview {
+  position: relative;
+  padding-bottom: 20px; }
+  .preview::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    top: 100%;
+    background: #fafafa; }
+  .preview-title {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "OpenSans", Arial, sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.44;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #fafafa; }
 
 .menu {
   position: fixed;
@@ -4385,16 +4407,13 @@ table {
 
 @media screen and (max-width: 1316px) {
   .join svg:first-child {
-    top: -100px;
-    left: -100px; }
+    left: 50px;
+    top: -20px; }
   .join::after {
     width: 750px;
     height: 424px;
     right: -230px;
-    top: 60px; }
-  .join-content {
-    margin: 48px 0;
-    margin-bottom: 434px; } }
+    top: 240px; } }
 
 @media screen and (max-width: 991px) {
   .join svg:first-child {
@@ -4407,8 +4426,11 @@ table {
     height: 565px;
     top: 210px;
     right: -290px; }
-  .join-content__text {
-    margin-top: 16px; } }
+  .join-content {
+    margin: 48px 0;
+    margin-bottom: 434px; }
+    .join-content__text {
+      margin-top: 16px; } }
 
 @media screen and (max-width: 767px) {
   .join svg:first-child {
@@ -4439,6 +4461,39 @@ table {
 @media screen and (max-width: 506px) {
   .join::after {
     top: 460px; } }
+
+.claim {
+  position: relative; }
+  .claim svg:first-child {
+    position: absolute;
+    top: 170px;
+    right: -30px; }
+  .claim-img {
+    margin: 265px 0;
+    margin-bottom: 212px; }
+  .claim-content {
+    margin-top: 178px; }
+    .claim-content__title span:last-child {
+      margin-left: 115px; }
+    .claim-content__text {
+      margin-top: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -ms-flex-wrap: no-wrap;
+          flex-wrap: no-wrap; }
+      .claim-content__text p {
+        width: calc(50% - 12px); }
 
 .home {
   overflow: hidden;

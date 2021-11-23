@@ -45,18 +45,14 @@
 @media screen and (max-width: 1316px) {
 	.join {
 		& svg:first-child {
-			top: -100px;
-			left: -100px;
+			left: 50px;
+			top: -20px;
 		}
 		&::after {
 			width: 750px;
 			height: 424px;
 			right: -230px;
-			top: 60px;
-		}
-		&-content {
-			margin: 48px 0;
-			margin-bottom: 434px;
+			top: 240px;
 		}
 	}
 }
@@ -76,6 +72,8 @@
 			right: -290px;
 		}
 		&-content {
+			margin: 48px 0;
+			margin-bottom: 434px;
 			&__text {
 				margin-top: 16px;
 			}
