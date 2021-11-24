@@ -10,7 +10,15 @@ const menuToggle = target => {
 	document.documentElement.classList.toggle('is-locked');
 };
 
-document.addEventListener('DOMContentLoaded', () => {});
+// const updateRoadmap = () => {
+// 	const roadMapItems = document.querySelectorAll('.roadmap-list__item');
+
+// 	roadMapItems.forEach(item => )
+// }
+
+document.addEventListener('DOMContentLoaded', () => {
+	// updateRoadmap();
+});
 
 document.addEventListener('click', e => {
 	const target = e.target;

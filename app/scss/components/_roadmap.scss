@@ -9,7 +9,8 @@
 		margin-top: 181px;
 		position: relative;
 		padding: 0;
-		padding-bottom: 35px;
+		padding-bottom: 30px;
+		list-style: none;
 		&::before {
 			content: '';
 			position: absolute;
@@ -23,6 +24,9 @@
 			position: relative;
 			padding-left: 40px;
 			margin-bottom: 52px;
+			font-size: 2.6rem;
+			line-height: 1.385;
+			color: $white;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -49,18 +53,75 @@
 		&__date {
 			display: block;
 			text-transform: uppercase;
-			font-size: 2.6rem;
-			line-height: 1.385;
 			font-weight: 500;
 			margin-bottom: 6px;
-			color: $white;
 		}
 		&__event {
 			font-family: $secondary-font;
-			font-size: 2.6rem;
-			line-height: 1.385;
 			font-weight: 400;
-			color: $white;
+		}
+	}
+}
+
+@media screen and (max-width: 1780px) {
+	.roadmap {
+		&-img {
+			& img {
+				max-width: 85%;
+			}
+		}
+		&-list {
+			margin-top: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 1316px) {
+	.roadmap {
+		&-img {
+			@include flex(row, center);
+			height: 100%;
+			& img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.roadmap {
+		&-content {
+			&__wrapper {
+				padding: 56px 0;
+				padding-bottom: 112px;
+			}
+		}
+		&-list {
+			&__item {
+				min-height: 100px;
+				margin-bottom: 12px;
+				font-size: 1.8rem;
+				line-height: 1.44;
+				&:last-child {
+					min-height: auto;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.roadmap {
+		&-list {
+			padding: 0;
+			margin-top: 80px;
+			&__item {
+				min-height: 118px;
+				&:last-child {
+					min-height: 118px;
+				}
+			}
 		}
 	}
 }
