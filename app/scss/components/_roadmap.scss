@@ -1,0 +1,66 @@
+.roadmap {
+	&-content {
+		&__wrapper {
+			padding: 144px 0;
+			padding-bottom: 182px;
+		}
+	}
+	&-list {
+		margin-top: 181px;
+		position: relative;
+		padding: 0;
+		padding-bottom: 35px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 1px;
+			height: 100%;
+			background: $green-400;
+		}
+		&__item {
+			position: relative;
+			padding-left: 40px;
+			margin-bottom: 52px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				width: 18px;
+				height: 18px;
+				left: -9px;
+				top: 0;
+				border-radius: 50%;
+				border: 1px solid $green-400;
+				background: $black-100;
+			}
+			&_active {
+				&::before {
+					background: $green-400;
+				}
+				& span:first-child {
+					color: $green-400;
+				}
+			}
+		}
+		&__date {
+			display: block;
+			text-transform: uppercase;
+			font-size: 2.6rem;
+			line-height: 1.385;
+			font-weight: 500;
+			margin-bottom: 6px;
+			color: $white;
+		}
+		&__event {
+			font-family: $secondary-font;
+			font-size: 2.6rem;
+			line-height: 1.385;
+			font-weight: 400;
+			color: $white;
+		}
+	}
+}
