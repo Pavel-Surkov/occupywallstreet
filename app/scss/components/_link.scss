@@ -6,8 +6,17 @@
 	line-height: 1.4;
 	font-weight: 500;
 	position: relative;
-	&-bold {
-		font-weight: 700;
+	&_underlined {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 4px;
+			width: 100%;
+			height: 1px;
+			background: $white;
+		}
 	}
 	&-arrow {
 		color: $green-400;
