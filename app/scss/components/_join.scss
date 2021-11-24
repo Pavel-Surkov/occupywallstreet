@@ -1,0 +1,128 @@
+.join {
+	position: relative;
+	& svg:first-child {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 124px;
+		right: -395px;
+		width: 1366px;
+		height: 772px;
+		background: image('home-pic@2x.png') no-repeat center center;
+		background-size: 100% 100%;
+	}
+	&-content {
+		margin: 240px 0;
+		margin-bottom: 282px;
+		position: relative;
+		z-index: 2;
+		&__text {
+			margin-top: 24px;
+			max-width: 758px;
+		}
+		&__link {
+			margin-top: 32px;
+		}
+	}
+}
+
+@media screen and (max-width: 1780px) {
+	.join {
+		&::after {
+			width: 1000px;
+			height: 565px;
+			top: 260px;
+			right: -285px;
+		}
+	}
+}
+
+@media screen and (max-width: 1316px) {
+	.join {
+		& svg:first-child {
+			left: 50px;
+			top: -20px;
+		}
+		&::after {
+			width: 750px;
+			height: 424px;
+			right: -230px;
+			top: 240px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.join {
+		& svg:first-child {
+			width: 500px;
+			height: 500px;
+			top: -60px;
+			left: 0;
+		}
+		&::after {
+			width: 800px;
+			height: 452px;
+			top: 290px;
+			right: -240px;
+		}
+		&-content {
+			margin: 48px 0;
+			margin-bottom: 434px;
+			&__text {
+				margin-top: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.join {
+		& svg:first-child {
+			width: 400px;
+			height: 400px;
+			top: -60px;
+			left: 30px;
+			& circle {
+				fill-opacity: 0.22;
+			}
+		}
+		&::after {
+			width: 750px;
+			height: 424px;
+			right: -220px;
+			top: 320px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.join {
+		& svg:first-child {
+			width: 347px;
+			height: 347px;
+			top: -40px;
+			left: -25px;
+			z-index: 3;
+		}
+		&::after {
+			width: 541px;
+			height: 306px;
+			top: 380px;
+			right: -173px;
+		}
+	}
+}
+
+@media screen and (max-width: 506px) {
+	.join {
+		&::after {
+			top: 460px;
+		}
+	}
+}

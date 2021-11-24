@@ -1,0 +1,51 @@
+.header {
+	position: relative;
+	z-index: 10;
+	&-wrapper {
+		background: $black-100;
+		padding-top: 48px;
+	}
+	&-logo {
+		display: inline-block;
+	}
+	&-nav {
+		height: 100%;
+		@include flex(row, center, flex-end);
+		&__link {
+			margin-left: 56px;
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1316px) {
+	.header {
+		&-nav {
+			&__link {
+				margin-left: 20px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.header {
+		margin-bottom: -1px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.header {
+		&-wrapper {
+			padding-top: 16px;
+		}
+		&-logo {
+			max-width: 229px;
+		}
+	}
+}

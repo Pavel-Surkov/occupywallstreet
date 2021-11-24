@@ -3,10 +3,15 @@
 // -----------------------------------------------------------------------------
 
 // Base
-$font: '', sans-serif;
+$font: 'NeueMachina', Arial, sans-serif;
+$secondary-font: 'OpenSans', Arial, sans-serif;
 $base-font-size: 16px;
 $base-path: '../';
 
 // Colors
 $white: #fff;
-$black: #333;
+$white-100: #fafafa;
+$black: #000;
+$black-100: #010101;
+$green-400: #bfec09;
+$dark-green: #5e6e18;

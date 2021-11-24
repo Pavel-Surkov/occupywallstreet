@@ -1,0 +1,143 @@
+.link {
+	color: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 2rem;
+	line-height: 1.4;
+	font-weight: 500;
+	position: relative;
+	&-bold {
+		font-weight: 700;
+	}
+	&-arrow {
+		color: $green-400;
+		display: inline-block;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 2rem;
+		line-height: 1.4;
+		font-weight: 500;
+		position: relative;
+		margin-top: 40px;
+		& span:last-child {
+			display: inline-block;
+			position: relative;
+			height: 2px;
+			width: 140px;
+			background-color: $green-400;
+			margin-bottom: 3px;
+			margin-left: 24px;
+			transition: 0.5s;
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				right: -3px;
+				width: 10px;
+				height: 2px;
+				border-radius: 3px;
+				background-color: $green-400;
+			}
+			&::before {
+				transform: rotate(45deg);
+				top: calc(50% - 4px);
+			}
+			&::after {
+				transform: rotate(-45deg);
+				top: calc(50% + 2px);
+			}
+		}
+		&:hover {
+			& span:first-child {
+				position: relative;
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 1px;
+					width: 100%;
+					background: $green-400;
+				}
+			}
+			& span:last-child {
+				width: 244px;
+			}
+		}
+		&:active {
+			color: $dark-green;
+			& span:last-child {
+				background: $dark-green;
+				transition: none;
+				&::before,
+				&::after {
+					background: $dark-green;
+				}
+			}
+			& span:first-child {
+				&::before {
+					background: $dark-green;
+				}
+			}
+		}
+	}
+	&:hover {
+		color: $green-400;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 4px;
+			height: 1px;
+			width: 100%;
+			background: $green-400;
+		}
+	}
+	&:active {
+		color: $dark-green;
+		&::before {
+			background: $dark-green;
+		}
+	}
+}
+
+@media screen and (max-width: 1316px) {
+	.link {
+		font-size: 1.4rem;
+		line-height: 1.57;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.link {
+		&-arrow {
+			font-size: 1.4rem;
+			line-height: 1.57;
+			& span:last-child {
+				margin-left: 16px;
+				width: 105px;
+			}
+			&:hover {
+				& span:last-child {
+					width: 183px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.link {
+		&-arrow {
+			& span:last-child {
+				width: 72px;
+			}
+			&:hover {
+				& span:last-child {
+					width: 72px;
+					opacity: 0.85;
+				}
+			}
+		}
+	}
+}
