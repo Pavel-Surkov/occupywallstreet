@@ -1,0 +1,144 @@
+.whitepaper {
+	& .container {
+		position: relative;
+		& svg:first-child {
+			position: absolute;
+			right: -200px;
+			top: 170px;
+		}
+	}
+	&-content {
+		margin-top: 32px;
+		@include flex(row, flex-start, space-between);
+		& p {
+			max-width: calc(50% - 20px);
+		}
+		&__wrapper {
+			padding: 176px 0;
+			padding-bottom: 182px;
+		}
+		&__title {
+			& span:last-child {
+				margin-left: 170px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1780px) {
+	.whitepaper {
+		& .container {
+			& svg:first-child {
+				top: 200px;
+			}
+		}
+		&-content {
+			& p {
+				max-width: calc(50% - 12px);
+			}
+		}
+		&-img {
+			& img {
+				max-width: 90%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1316px) {
+	.whitepaper {
+		& .container {
+			& svg:first-child {
+				right: -220px;
+			}
+		}
+		&-content {
+			display: block;
+			& p {
+				max-width: none;
+				margin-bottom: 12px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			&__title {
+				& span:last-child {
+					margin: 0;
+				}
+			}
+		}
+		&-img {
+			& img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.whitepaper {
+		& .container {
+			& svg:first-child {
+				width: 400px;
+				height: 400px;
+				top: 80px;
+				right: -140px;
+			}
+		}
+		&-content {
+			&__wrapper {
+				padding: 72px 0;
+				padding-bottom: 112px;
+			}
+			&__title {
+				& span:last-child {
+					margin-left: 77px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.whitepaper {
+		& .container {
+			& svg:first-child {
+				width: 310px;
+				height: 310px;
+				top: 0;
+				right: 100px;
+				z-index: 2;
+				& circle {
+					fill-opacity: 0.2;
+				}
+			}
+		}
+		&-content {
+			margin-top: 24px;
+		}
+		&-img {
+			margin-top: 48px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.whitepaper {
+		& .container {
+			& svg:first-child {
+				top: -10px;
+				right: 60px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.whitepaper {
+		& .container {
+			& svg:first-child {
+				right: -60px;
+			}
+		}
+	}
+}
