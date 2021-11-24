@@ -9,7 +9,8 @@
   "author": "UX Mind",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.27.7"
+    "browser-sync": "^2.27.7",
+    "swiper": "^7.3.1"
   },
   "dependencies": {
     "autoprefixer": "^9.8.5",
