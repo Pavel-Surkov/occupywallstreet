@@ -1,0 +1,61 @@
+.story {
+	& .container {
+		position: relative;
+		& svg:first-child {
+			position: absolute;
+			top: 136px;
+			left: -90px;
+		}
+		& svg:nth-child(2) {
+			position: absolute;
+			left: 510px;
+			top: 700px;
+		}
+	}
+	&-content {
+		position: relative;
+		z-index: 2;
+		padding: 152px 0;
+		padding-bottom: 174px;
+		display: grid;
+		grid-template-columns: repeat(2, calc(50% - 12px));
+		grid-template-rows: auto 1fr;
+		grid-column-gap: 24px;
+		&__title {
+			margin-top: 140px;
+			& span:first-child {
+				margin-left: 140px;
+			}
+		}
+	}
+	&-img {
+		grid-area: 1 / 2 / 3 / 3;
+		& img {
+			max-width: 752px;
+			margin-left: auto;
+			object-fit: contain;
+		}
+		& p {
+			display: none;
+		}
+	}
+	&-text {
+		margin-top: 32px;
+		@include flex(row, flex-start, space-between);
+		&__col {
+			width: calc(50% - 12px);
+		}
+		& p {
+			margin-bottom: 12px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1316px) {
+	.story {
+		// TODO: change cols to 7 / 5
+	}
+}
