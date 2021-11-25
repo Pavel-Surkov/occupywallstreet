@@ -4884,14 +4884,19 @@ table {
       -ms-flex-align: start;
           align-items: flex-start;
   -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap; }
+      flex-wrap: no-wrap;
+  position: relative;
+  z-index: 1; }
   .whitepaper-content p {
     max-width: calc(50% - 20px); }
   .whitepaper-content__wrapper {
     padding: 176px 0;
     padding-bottom: 182px; }
-  .whitepaper-content__title span:last-child {
-    margin-left: 170px; }
+  .whitepaper-content__title {
+    position: relative;
+    z-index: 1; }
+    .whitepaper-content__title span:last-child {
+      margin-left: 170px; }
 
 @media screen and (max-width: 1780px) {
   .whitepaper .container svg:first-child {
@@ -5049,6 +5054,79 @@ table {
       min-height: 118px; }
       .roadmap-list__item:last-child {
         min-height: 118px; } }
+
+.team-swiper {
+  padding: 140px 0;
+  padding-bottom: 172px; }
+  .team-swiper__title {
+    position: relative; }
+    .team-swiper__title svg {
+      position: absolute;
+      z-index: 1;
+      top: -180px;
+      left: -160px; }
+    .team-swiper__title span {
+      position: relative;
+      z-index: 2; }
+      .team-swiper__title span:first-child {
+        margin-left: 115px; }
+
+.team .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.team .swiper-slide {
+  width: calc(25% - 12px); }
+  .team .swiper-slide:nth-child(2) {
+    margin-bottom: 40px; }
+
+.team .swiper-title {
+  width: calc(75% - 12px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  margin-top: 155px; }
+
+.team-member__name {
+  font-size: 2.6rem;
+  line-height: 1.385;
+  text-transform: uppercase;
+  color: #bfec09;
+  margin: 0;
+  margin-top: 24px; }
+
+.team-member__note {
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.57;
+  color: #fff;
+  margin: 0;
+  margin-top: 5px; }
 
 .home {
   overflow: hidden;

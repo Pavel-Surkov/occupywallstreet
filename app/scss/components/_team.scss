@@ -1,0 +1,54 @@
+.team {
+	&-swiper {
+		padding: 140px 0;
+		padding-bottom: 172px;
+		&__title {
+			position: relative;
+			& svg {
+				position: absolute;
+				z-index: 1;
+				top: -180px;
+				left: -160px;
+			}
+			& span {
+				position: relative;
+				z-index: 2;
+				&:first-child {
+					margin-left: 115px;
+				}
+			}
+		}
+	}
+	& .swiper-wrapper {
+		@include flex(row, flex-start, space-between, wrap);
+	}
+	& .swiper-slide {
+		width: calc(25% - 12px);
+		&:nth-child(2) {
+			margin-bottom: 40px;
+		}
+	}
+	& .swiper-title {
+		width: calc(75% - 12px);
+		@include flex(row, center, center);
+		margin-top: 155px;
+	}
+	&-member {
+		&__name {
+			font-size: 2.6rem;
+			line-height: 1.385;
+			text-transform: uppercase;
+			color: $green-400;
+			margin: 0;
+			margin-top: 24px;
+		}
+		&__note {
+			font-family: $secondary-font;
+			font-size: 1.4rem;
+			line-height: 1.57;
+			color: $white;
+			margin: 0;
+			margin-top: 5px;
+		}
+	}
+}

@@ -93,7 +93,7 @@ $utilities: map-get-multiple(
 // 5. Components
 @import 'components/button', 'components/title', 'components/link', 'components/paragraph', 'components/preview',
 	'components/menu', 'components/join', 'components/claim', 'components/story', 'components/whitepaper',
-	'components/roadmap';
+	'components/roadmap', 'components/team';
 
 // 6. Page-specific styles
 @import 'pages/home';
