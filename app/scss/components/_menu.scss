@@ -31,8 +31,12 @@
 		width: 28px;
 		height: 22px;
 		position: relative;
+		transition: 0.5s;
 		&:hover {
 			opacity: 0.85;
+		}
+		&_close {
+			transform: rotate(90deg);
 		}
 		& span {
 			position: absolute;
