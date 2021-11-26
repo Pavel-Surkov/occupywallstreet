@@ -5722,6 +5722,23 @@ const initNftSwiper = () => {
 	}
 };
 
+const allNftHandler = target => {
+	const nftBtn = target.closest('.nft-button');
+	const nftSwiperWrapper = document.querySelector('.nft-swiper__wrapper');
+
+	if (nftSwiperWrapper) {
+		const nftElements = Array.from(nftSwiperWrapper.children);
+
+		const nftHiddenElements = nftElements.filter(el => {
+			return el.classList.contains('slide_hidden');
+		});
+
+		nftHiddenElements.forEach(el => (el.hidden = false));
+
+		nftBtn.style.display = 'none';
+	}
+};
+
 const menuToggle = target => {
 	const menuBtn = target.closest('.menu-btn');
 	const menu = document.querySelector('.menu');
@@ -5739,13 +5756,16 @@ const mobileMenuClick = (target, e) => {
 	const menu = document.querySelector('.menu_active');
 
 	const elementTo = document.querySelector(menuLink.dataset.id);
-	const elementToScroll = elementTo.getBoundingClientRect().top;
 
-	menu.classList.remove('menu_active');
-	menuBtn.classList.remove('menu-btn_close');
-	document.documentElement.classList.remove('is-locked');
+	if (elementTo) {
+		const elementToScroll = elementTo.getBoundingClientRect().top;
 
-	window.scrollTo(0, elementToScroll);
+		menu.classList.remove('menu_active');
+		menuBtn.classList.remove('menu-btn_close');
+		document.documentElement.classList.remove('is-locked');
+
+		window.scrollTo(0, elementToScroll);
+	}
 };
 
 const updateRoadmap = () => {
@@ -5762,53 +5782,7 @@ const updateRoadmap = () => {
 	});
 };
 
-// const updateRoadmap = () => {
-// 	const months = [
-// 		'january',
-// 		'february',
-// 		'march',
-// 		'april',
-// 		'may',
-// 		'june',
-// 		'july',
-// 		'august',
-// 		'september',
-// 		'october',
-// 		'november',
-// 		'december'
-// 	];
-// 	const currentDate = new Date();
-// 	const roadMapItems = Array.from(document.querySelectorAll('.roadmap-list__item'));
-
-// 	roadMapItems.reduce((lastDateStr, item) => {
-// 		const dateStr = item.firstElementChild.textContent;
-
-// 		const [month, day] = dateStr.split(' ');
-// 		const monthNumber = months.indexOf(month) + 1;
-// 		const dayNumber = parseInt(day);
-// 		const currentYear = currentDate.getFullYear();
-
-// 		const numDateStr = `${currentYear}.${monthNumber}.${dayNumber}`;
-
-// 		let eventDay = new Date(numDateStr);
-// 		const lastDate = new Date(lastDateStr);
-
-// 		if (lastDate > eventDay) {
-// 			const correctDateStr = numDateStr.split('.').map((item, index) => {
-// 				return index === 0 ? ++item : item;
-// 			});
-// 			eventDay = new Date(correctDateStr);
-
-// 			alert(eventDay);
-// 			return correctDateStr;
-// 		}
-
-// 		alert(eventDay);
-
-// 		return numDateStr;
-// 	}, `2021.1.01`);
-// };
-
+// Event listeners
 document.addEventListener('DOMContentLoaded', () => {
 	updateRoadmap();
 	initTeamSwiper();
@@ -5827,29 +5801,7 @@ document.addEventListener('click', e => {
 	}
 
 	if (target.closest('.nft-button')) {
-		const nftBtn = target.closest('.nft-button');
-		const nftSwiperWrapper = document.querySelector('.nft-swiper__wrapper');
-
-		if (nftSwiperWrapper) {
-			const nftElements = Array.from(nftSwiperWrapper.children);
-
-			const nftHiddenElements = nftElements.filter(el => {
-				return el.classList.contains('slide_hidden');
-			});
-
-			// Try to scroll
-			// const elementToScroll = nftHiddenElements[0].getBoundingClientRect();
-			// const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-			// const scrollCountTop = elementToScroll.top + scrollTop;
-
-			// window.scrollTo(0, scrollCountTop);
-			//
-
-			nftHiddenElements.forEach(el => (el.hidden = false));
-
-			nftBtn.style.display = 'none';
-		}
+		allNftHandler(target);
 	}
 });
 
