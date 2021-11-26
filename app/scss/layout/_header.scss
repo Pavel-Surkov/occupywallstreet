@@ -36,7 +36,7 @@
 			&:hover {
 				color: $white;
 				&::before {
-					content: none;
+					opacity: 0;
 				}
 				& span {
 					transform: translateY(-100%);

@@ -4126,7 +4126,10 @@ table {
       bottom: 4px;
       width: 100%;
       height: 1px;
-      background: #fff; }
+      background: #fff;
+      -webkit-transition: opacity .5s ease;
+      -o-transition: opacity .5s ease;
+      transition: opacity .5s ease; }
   .link-arrow {
     color: #bfec09;
     display: inline-block;
@@ -4295,7 +4298,7 @@ table {
       .header-nav__link:hover {
         color: #fff; }
         .header-nav__link:hover::before {
-          content: none; }
+          opacity: 0; }
         .header-nav__link:hover span {
           -webkit-transform: translateY(-100%);
               -ms-transform: translateY(-100%);
@@ -4378,7 +4381,7 @@ table {
     .footer-col__link:hover {
       color: #fff; }
       .footer-col__link:hover::before {
-        content: none; }
+        opacity: 0; }
       .footer-col__link:hover span {
         -webkit-transform: translateY(-100%);
             -ms-transform: translateY(-100%);
