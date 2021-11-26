@@ -82,7 +82,7 @@ const updateRoadmap = () => {
 	const currentDate = new Date();
 	const roadMapItems = Array.from(document.querySelectorAll('.roadmap-list__item'));
 
-	const roadMapDates = roadMapItems.map(item => {
+	roadMapItems.map(item => {
 		const dateStr = item.dataset.date;
 		const eventDate = new Date(dateStr);
 
@@ -140,6 +140,9 @@ const updateRoadmap = () => {
 // };
 
 document.addEventListener('DOMContentLoaded', () => {
+	AOS.init({
+		duration: 800
+	});
 	updateRoadmap();
 	initTeamSwiper();
 	initNftSwiper();
