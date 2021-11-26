@@ -5,12 +5,14 @@
 			padding-bottom: 182px;
 		}
 		&__wrapper {
-			@include flex(row, flex-start, space-between, wrap);
+			@include flex(row, flex-start, flex-start, wrap);
 		}
 		&__slide {
-			max-width: calc(33.33% - 35px);
+			max-width: calc(33.333% - 46px);
+			margin-right: 69px;
 			&:nth-child(3n) {
 				margin-bottom: 64px;
+				margin-right: 0;
 			}
 			&:last-child {
 				margin: 0;
@@ -18,7 +20,6 @@
 		}
 	}
 	&-button {
-		margin-top: 72px;
 		position: relative;
 		width: 269px;
 		text-align: left;
@@ -38,7 +39,8 @@
 	.nft {
 		&-swiper {
 			&__slide {
-				max-width: calc(33.33% - 20px);
+				max-width: calc(33.33% - 30px);
+				margin-right: 45px;
 			}
 		}
 	}
@@ -52,7 +54,8 @@
 				padding-bottom: 112px;
 			}
 			&__slide {
-				max-width: calc(33.33% - 12px);
+				max-width: calc(33.33% - 14px);
+				margin-right: 21px;
 			}
 		}
 		&-button {

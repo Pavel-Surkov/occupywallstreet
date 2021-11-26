@@ -167,9 +167,18 @@ document.addEventListener('click', e => {
 				return el.classList.contains('slide_hidden');
 			});
 
-			nftHiddenElements.forEach(el => {
-				el.hidden ? (el.hidden = false) : (el.hidden = true);
-			});
+			// Try to scroll
+			// const elementToScroll = nftHiddenElements[0].getBoundingClientRect();
+			// const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+			// const scrollCountTop = elementToScroll.top + scrollTop;
+
+			// window.scrollTo(0, scrollCountTop);
+			//
+
+			nftHiddenElements.forEach(el => (el.hidden = false));
+
+			nftBtn.style.display = 'none';
 		}
 	}
 });
