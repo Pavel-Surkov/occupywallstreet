@@ -2,7 +2,7 @@
 'use strict';
 
 // FUNCTIONS
-const initSwiper = () => {
+const initTeamSwiper = () => {
 	if (window.innerWidth <= 767) {
 		const teamSwiperWrapper = document.querySelector('.team-swiper__wrapper');
 		const teamSwiperSlides = Array.from(teamSwiperWrapper.children);
@@ -18,6 +18,38 @@ const initSwiper = () => {
 				nextEl: '.swiper-button-next'
 			}
 		});
+	}
+};
+
+const initNftSwiper = () => {
+	if (window.innerWidth <= 767) {
+		const nftSwiperWrapper = document.querySelector('.nft-swiper__wrapper');
+		const nftSwiperSlides = Array.from(nftSwiperWrapper.children);
+
+		nftSwiperWrapper.classList.remove('nft-swiper__wrapper');
+		nftSwiperSlides.forEach(slide => {
+			slide.classList.remove('nft-swiper__slide');
+		});
+
+		let nftSwiper = new Swiper('.nft-swiper', {
+			navigation: {
+				prevEl: '.swiper-button-prev',
+				nextEl: '.swiper-button-next'
+			}
+		});
+
+		// Makes all the nft's visible
+		if (nftSwiperWrapper) {
+			const nftElements = Array.from(nftSwiperWrapper.children);
+
+			const nftHiddenElements = nftElements.filter(el => {
+				return el.classList.contains('slide_hidden');
+			});
+
+			nftHiddenElements.forEach(el => {
+				el.hidden = false;
+			});
+		}
 	}
 };
 
@@ -110,7 +142,8 @@ const updateRoadmap = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 	updateRoadmap();
-	initSwiper();
+	initTeamSwiper();
+	initNftSwiper();
 });
 
 document.addEventListener('click', e => {
@@ -122,6 +155,23 @@ document.addEventListener('click', e => {
 
 	if (target.closest('.menu-nav__link')) {
 		mobileMenuClick(target, e);
+	}
+
+	if (target.closest('.nft-button')) {
+		const nftBtn = target.closest('.nft-button');
+		const nftSwiperWrapper = document.querySelector('.nft-swiper__wrapper');
+
+		if (nftSwiperWrapper) {
+			const nftElements = Array.from(nftSwiperWrapper.children);
+
+			const nftHiddenElements = nftElements.filter(el => {
+				return el.classList.contains('slide_hidden');
+			});
+
+			nftHiddenElements.forEach(el => {
+				el.hidden ? (el.hidden = false) : (el.hidden = true);
+			});
+		}
 	}
 });
 
