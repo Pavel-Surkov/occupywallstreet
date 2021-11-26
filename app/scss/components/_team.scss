@@ -5,6 +5,7 @@
 		&__title {
 			position: relative;
 			& svg {
+				pointer-events: none;
 				position: absolute;
 				z-index: 1;
 				top: -180px;
@@ -43,12 +44,14 @@
 			margin-top: 24px;
 		}
 		&__note {
-			font-family: $secondary-font;
-			font-size: 1.4rem;
-			line-height: 1.57;
-			color: $white;
-			margin: 0;
 			margin-top: 5px;
+			& p {
+				font-family: $secondary-font;
+				font-size: 1.4rem;
+				line-height: 1.57;
+				color: $white;
+				margin: 0;
+			}
 		}
 	}
 }
@@ -61,7 +64,7 @@
 	}
 }
 
-@media screen and (max-width: 1316px) {
+@media screen and (max-width: 1385px) {
 	.team {
 		& .swiper-title {
 			margin-top: 70px;
@@ -79,8 +82,10 @@
 					margin-left: 54px;
 				}
 				& svg {
-					width: 400px;
-					height: 400px;
+					width: 300px;
+					height: 300px;
+					top: -100px;
+					left: -90px;
 				}
 			}
 			&__slide {
@@ -110,4 +115,35 @@
 }
 
 @media screen and (max-width: 767px) {
+	.team {
+		&-swiper {
+			max-width: 402px;
+			margin: 0 auto;
+			padding-top: 64px;
+			&__navigation {
+				max-width: 402px;
+				margin: 0 auto;
+				margin-top: 10px;
+				@include flex(row, flex-start, space-between);
+			}
+		}
+		& .swiper-title {
+			width: 100%;
+		}
+		&-member {
+			&__name {
+				margin-top: 24px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.team {
+		&-swiper {
+			&__block {
+				max-width: none;
+			}
+		}
+	}
 }

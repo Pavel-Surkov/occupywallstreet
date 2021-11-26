@@ -1,0 +1,86 @@
+.nft {
+	&-swiper {
+		&__block {
+			padding: 176px 0;
+			padding-bottom: 182px;
+		}
+		&__wrapper {
+			@include flex(row, flex-start, space-between, wrap);
+		}
+		&__slide {
+			max-width: calc(33.33% - 35px);
+			&:nth-child(3n) {
+				margin-bottom: 64px;
+			}
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+	&-button {
+		margin-top: 72px;
+		position: relative;
+		width: 269px;
+		text-align: left;
+		&__wrapper {
+			@include flex(row, flex-start, center);
+		}
+		& span:last-child {
+			margin: 0;
+			position: absolute;
+			top: calc(50% - 1px);
+			left: calc(103px + 24px);
+		}
+	}
+}
+
+@media screen and (max-width: 1385px) {
+	.nft {
+		&-swiper {
+			&__slide {
+				max-width: calc(33.33% - 20px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.nft {
+		&-swiper {
+			&__block {
+				padding: 72px 0;
+				padding-bottom: 112px;
+			}
+			&__slide {
+				max-width: calc(33.33% - 12px);
+			}
+		}
+		&-button {
+			width: 200px;
+			margin-top: 50px;
+			&__wrapper {
+				@include flex(row, flex-start, center);
+			}
+			& span:last-child {
+				margin: 0;
+				position: absolute;
+				top: calc(50% - 1px);
+				left: calc(71px + 24px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.nft {
+		&-swiper {
+			max-width: 400px;
+			margin: 0 auto;
+			&__navigation {
+				margin: 0 auto;
+				margin-top: 32px;
+				@include flex(row, flex-start, space-between);
+			}
+		}
+	}
+}

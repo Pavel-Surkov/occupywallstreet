@@ -2,6 +2,7 @@
 	& .container {
 		position: relative;
 		& svg:first-child {
+			pointer-events: none;
 			position: absolute;
 			right: -200px;
 			top: 170px;
@@ -12,7 +13,7 @@
 		@include flex(row, flex-start, space-between);
 		position: relative;
 		z-index: 1;
-		& p {
+		& .paragraph {
 			max-width: calc(50% - 20px);
 		}
 		&__wrapper {
@@ -37,7 +38,7 @@
 			}
 		}
 		&-content {
-			& p {
+			& .paragraph {
 				max-width: calc(50% - 12px);
 			}
 		}
@@ -49,7 +50,7 @@
 	}
 }
 
-@media screen and (max-width: 1316px) {
+@media screen and (max-width: 1385px) {
 	.whitepaper {
 		& .container {
 			& svg:first-child {
@@ -58,7 +59,7 @@
 		}
 		&-content {
 			display: block;
-			& p {
+			& .paragraph {
 				max-width: none;
 				margin-bottom: 12px;
 				&:last-child {

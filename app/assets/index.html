@@ -15,6 +15,7 @@
 	<link rel="icon" type="image/png" href="" sizes="96x96">
 	<link rel="apple-touch-icon" sizes="152x152" href="">
 	<!-- favicon -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 	<link href="css/application.css" rel="stylesheet">
 </head>
 
@@ -24,19 +25,31 @@
 		<div class="header-wrapper">
 			<div class="container">
 				<div class="row">
-					<div class="col-9 col-md-5">
+					<div class="col-9 col-md-5 col-lg-4">
 						<a href="/" class="header-logo">
-							<img src="./img/logos/logo.svg" alt="logo">
+							<img src="img/logos/logo.png" srcset="img/logos/logo.png 1x, img/logos/logo@2x.png 2x" alt="logo">
 						</a>
 					</div>
-					<div class="col-3 col-md-7">
+					<div class="col-3 col-md-7 col-lg-8">
 						<nav class="d-none d-lg-flex header-nav">
-							<a href="#claim" class="link header-nav__link">Claim NFT</a>
-							<a href="#story" class="link header-nav__link">Story</a>
-							<a href="#nft" class="link header-nav__link">NFT's</a>
-							<a href="#whitepaper" class="link header-nav__link">Whitepaper</a>
-							<a href="#roadmap" class="link header-nav__link">Roadmap</a>
-							<a href="#team" class="link header-nav__link">Team</a>
+							<a href="#claim" class="link header-nav__link">
+								<span data-hover="Claim NFT">Claim NFT</span>
+							</a>
+							<a href="#story" class="link header-nav__link">
+								<span data-hover="Story">Story</span>
+							</a>
+							<a href="#nft" class="link header-nav__link">
+								<span data-hover="NFT's">NFT's</span>
+							</a>
+							<a href="#whitepaper" class="link header-nav__link">
+								<span data-hover="Whitepaper">Whitepaper</span>
+							</a>
+							<a href="#roadmap" class="link header-nav__link">
+								<span data-hover="Roadmap">Roadmap</span>
+							</a>
+							<a href="#team" class="link header-nav__link">
+								<span data-hover="Team">Team</span>
+							</a>
 						</nav>
 						<div class="d-lg-none menu-btn__wrapper">
 							<button class="menu-btn">
@@ -54,29 +67,34 @@
 	<!-- Begin main -->
 	<main class="main home">
 		<section class="join">
-			<svg width="712" height="868" viewBox="0 0 712 868" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<circle cx="278" cy="434" r="434" fill="url(#paint0_radial_1_10)" fill-opacity="0.2" />
-				<defs>
-					<radialGradient id="paint0_radial_1_10" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-						gradientTransform="translate(278 434) rotate(90) scale(434)">
-						<stop stop-color="#BBF435" />
-						<stop offset="1" stop-color="#BBF435" stop-opacity="0" />
-					</radialGradient>
-				</defs>
-			</svg>
 			<div class="join-wrapper">
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-md-8">
 							<div class="join-content">
-								<h1 class="title title_size-xl join-content__title">Join our presale and&nbsp;receive
-									a&nbsp;free&nbsp;nft
-								</h1>
-								<p class="paragraph join-content__text">
-									Registered users are able to join our presale which launches on January 15 2022. First 10K users who
-									register will be able to mint a free Bloomy NFT on the presale launch day. Presale users will have
-									access to all NFTs at a discount prior to the public sale on January 16 2022.
-								</p>
+								<div class="join-content__title-wrapper">
+									<h1 class="title title_size-xl join-content__title">
+										Join our presale and&nbsp;receive
+										a&nbsp;free&nbsp;nft
+									</h1>
+									<svg width="712" height="868" viewBox="0 0 712 868" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="278" cy="434" r="434" fill="url(#paint0_radial_1_10)" fill-opacity="0.2" />
+										<defs>
+											<radialGradient id="paint0_radial_1_10" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+												gradientTransform="translate(278 434) rotate(90) scale(434)">
+												<stop stop-color="#BBF435" />
+												<stop offset="1" stop-color="#BBF435" stop-opacity="0" />
+											</radialGradient>
+										</defs>
+									</svg>
+								</div>
+								<div class="paragraph join-content__text">
+									<p>
+										Registered users are able to join our presale which launches on January 15 2022. First 10K users who
+										register will be able to mint a free Bloomy NFT on the presale launch day. Presale users will have
+										access to all NFTs at a discount prior to the public sale on January 16 2022.
+									</p>
+								</div>
 								<a href="#" class="link-arrow join-content__link">
 									<span>register for nft presale</span>
 									<span></span>
@@ -116,16 +134,20 @@
 										<span>bloomy NFT</span>
 									</h2>
 									<div class="claim-content__text">
-										<p class="paragraph">
-											Going back decades and decades, the trader’s best friend was the Bloomberg
-											terminal. As the Bull and&nbsp;Bear factions battle one another, they are aided by highly useful,
-											multi-purpose bots, affectionately titled as “Bloomy”.
-										</p>
-										<p class="paragraph">
-											Bloomies are assigned random but powerful in&#8209;game utilities that will make it easier to
-											acquire land zones, win NFTs and earn. Before we launch our NFT sale, these bots are available to
-											mint free of&nbsp;charge!
-										</p>
+										<div class="paragraph">
+											<p>
+												Going back decades and decades, the trader’s best friend was the Bloomberg
+												terminal. As the Bull and&nbsp;Bear factions battle one another, they are aided by highly
+												useful, multi-purpose bots, affectionately titled as “Bloomy”.
+											</p>
+										</div>
+										<div class="paragraph">
+											<p>
+												Bloomies are assigned random but powerful in&#8209;game utilities that will make it easier to
+												acquire land zones, win NFTs and earn. Before we launch our NFT sale, these bots are available
+												to mint free of&nbsp;charge!
+											</p>
+										</div>
 									</div>
 									<a href="#" class="link-arrow claim-content__link">
 										<span>Claim free NFT</span>
@@ -174,53 +196,69 @@
 								<img src="img/story-pic.png" srcset="img/story-pic.png 1x, img/story-pic@2x.png 2x" alt="">
 							</div>
 							<div class="d-xl-none story-img__content">
-								<p class="paragraph">
-									Nothing moves the markets like disaster and displeasure of the masses.
-								</p>
-								<p class="paragraph">
-									Occupy Wall Street is a web based universe set in the near future, in which all of the world’s
-									perennial
-									problems are still unsolved and worsening. Increasing income inequality, water and food shortages,
-									production problems, rising prices and regional wars are the norm. As all of this reaches unbearable
-									proportions, a widespread protest movement erupts.
-								</p>
-								<p class="d-none d-md-block paragraph">
-									Worker strikes shut down production across nearly all sectors, some governments are toppled and
-									dissolve into anarchy, but at the epicenter of it all is a movement against the world’s largest banks,
-									creating a new Occupy Wall Street of literally global proportions.
-								</p>
+								<div class="paragraph">
+									<p>
+										Nothing moves the markets like disaster and displeasure of the masses.
+									</p>
+								</div>
+								<div class="paragraph">
+									<p>
+										Occupy Wall Street is a web based universe set in the near future, in which all of the world’s
+										perennial
+										problems are still unsolved and worsening. Increasing income inequality, water and food shortages,
+										production problems, rising prices and regional wars are the norm. As all of this reaches unbearable
+										proportions, a widespread protest movement erupts.
+									</p>
+								</div>
+								<div class="d-none d-md-block paragraph">
+									<p>
+										Worker strikes shut down production across nearly all sectors, some governments are toppled and
+										dissolve into anarchy, but at the epicenter of it all is a movement against the world’s largest
+										banks, creating a new Occupy Wall Street of literally global proportions.
+									</p>
+								</div>
 							</div>
 						</div>
 						<div class="story-text">
 							<div class="story-text__col">
-								<p class="d-none d-xl-block paragraph">
-									Nothing moves the markets like disaster&nbsp;and&nbsp;displeasure of the masses.
-								</p>
-								<p class="d-none d-xl-block paragraph">
-									Occupy Wall Street is a web based universe set in the near future, in which all of the world’s
-									perennial
-									problems are still unsolved and worsening. Increasing income inequality, water and food shortages,
-									production problems, rising prices and regional wars are&nbsp;the norm. As all of this reaches
-									unbearable proportions, a widespread protest movement erupts.
-								</p>
-								<p class="d-block d-md-none d-xl-block paragraph">
-									Worker strikes shut down production across nearly all sectors, some governments are toppled and
-									dissolve into anarchy, but at the epicenter of it all is a movement against the world’s largest banks,
-									creating a new Occupy Wall Street of literally global proportions.
-								</p>
+								<div class="d-none d-xl-block paragraph">
+									<p>
+										Nothing moves the markets like disaster&nbsp;and&nbsp;displeasure of the masses.
+									</p>
+								</div>
+								<div class="d-none d-xl-block paragraph">
+									<p>
+										Occupy Wall Street is a web based universe set in the near future, in which all of the world’s
+										perennial problems are still unsolved and worsening. Increasing income inequality, water and food
+										shortages, production problems, rising prices and regional wars are&nbsp;the norm. As all of this
+										reaches unbearable proportions, a widespread protest movement erupts.
+									</p>
+								</div>
+								<div class="d-block d-md-none d-xl-block paragraph">
+									<p>
+										Worker strikes shut down production across nearly all sectors, some governments are toppled and
+										dissolve into anarchy, but at the epicenter of it all is a movement against the world’s largest
+										banks,
+										creating a new Occupy Wall Street of literally global proportions.
+									</p>
+								</div>
 							</div>
 							<div class="story-text__col">
-								<p class="paragraph">
-									As government forces continuously struggle to stop the unrest, armed vigilante groups emerge to
-									restore law and order. Calling themselves the “Bulls”, they help some sectors of the market recover.
-									Whereas other vigilantes, the “Bears” take up arms to&nbsp;create more chaos and accelerate the
-									decline, shorting civilization itself and profiting on the way down.
-								</p>
+								<div class="paragraph">
+									<p>
+										As government forces continuously struggle to stop the unrest, armed vigilante groups emerge to
+										restore law and order. Calling themselves the “Bulls”, they help some sectors of the market recover.
+										Whereas other vigilantes, the “Bears” take up arms to&nbsp;create more chaos and accelerate the
+										decline, shorting civilization itself and profiting on the way down.
+									</p>
+								</div>
 								<br>
-								<p class="paragraph">
-									Join a faction, enter the chaos and battle to&nbsp;win NFTs and acquire zones of land that produce
-									even more in-game utility.
-								</p>
+								<div class="paragraph">
+									<p>
+										Join a faction, enter the chaos and battle to&nbsp;win NFTs and acquire zones of land that produce
+										even more in-game utility.
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -228,7 +266,80 @@
 			</div>
 		</section>
 		<!-- NFT's -->
-		<section id="nft" class="nft"></section>
+		<section id="nft" class="nft">
+			<div class="nft-wrapper">
+				<div class="container">
+					<div class="preview">
+						<p class="preview-title">NFT's</p>
+					</div>
+					<div class="nft-swiper__block">
+						<div class="swiper nft-swiper">
+							<div class="swiper-wrapper nft-swiper__wrapper">
+								<div class="swiper-slide nft-swiper__slide">
+									<div class="nft-img">
+										<img src="img/nft/bull.jpg" srcset="img/nft/bull.jpg 1x, img/nft/bull@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+								<div class="swiper-slide nft-swiper__slide">
+									<div class="nft-img">
+										<img src="img/nft/gme.jpg" srcset="img/nft/gme.jpg 1x, img/nft/gme@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+								<div class="swiper-slide nft-swiper__slide">
+									<div class="nft-img">
+										<img src="img/nft/bear.jpg" srcset="img/nft/bear.jpg 1x, img/nft/bear@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+								<div class="swiper-slide nft-swiper__slide">
+									<div class="nft-img">
+										<img src="img/nft/gme.jpg" srcset="img/nft/gme.jpg 1x, img/nft/gme@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+								<div class="swiper-slide nft-swiper__slide">
+									<div class="nft-img">
+										<img src="img/nft/amc.jpg" srcset="img/nft/amc.jpg 1x, img/nft/amc@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+								<div class="swiper-slide nft-swiper__slide">
+									<div class="nft-img">
+										<img src="img/nft/we99.jpg" srcset="img/nft/we99.jpg 1x, img/nft/we99@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+								<div class="swiper-slide nft-swiper__slide slide_hidden" hidden>
+									<div class="nft-img">
+										<img src="img/nft/msft.jpg" srcset="img/nft/msft.jpg 1x, img/nft/msft@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+								<div class="swiper-slide nft-swiper__slide slide_hidden" hidden>
+									<div class="nft-img">
+										<img src="img/nft/whale.jpg" srcset="img/nft/whale.jpg 1x, img/nft/whale@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+								<div class="swiper-slide nft-swiper__slide slide_hidden" hidden>
+									<div class="nft-img">
+										<img src="img/nft/wallst.jpg" srcset="img/nft/wallst.jpg 1x, img/nft/wallst@2x.jpg 2x" alt="nft">
+									</div>
+								</div>
+							</div>
+							<div class="nft-swiper__navigation">
+								<div class="d-md-none swiper-button-prev">
+									<span></span>
+								</div>
+								<div class="d-md-none swiper-button-next">
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<div class="d-none d-md-flex nft-button__wrapper">
+							<button class="link-arrow nft-button">
+								<span>See more</span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<!-- NFT's -->
 		<section id="whitepaper" class="whitepaper">
 			<div class="whitepaper-wrapper">
@@ -260,16 +371,20 @@
 									<span>overview</span>
 								</h2>
 								<div class="whitepaper-content">
-									<p class="paragraph">
-										Occupy Wall Street is a first of its kind web based NFT game launched on the Solana Smart Chain. The
-										core of the game revolves around rewarding players&nbsp;with tokens for engaging in battle for land
-										zones which are themselves valuable NFTs.
-									</p>
-									<p class="paragraph">
-										Additional characters and battle capacity can be developed to further grow a player’s ability to
-										exert influence in the game world. Battles happen between the&nbsp;“Bull” and “Bear” factions as
-										well as the “Hedge Fund” NPCs.
-									</p>
+									<div class="paragraph">
+										<p>
+											Occupy Wall Street is a first of its kind web based NFT game launched on the Solana Smart Chain.
+											The core of the game revolves around rewarding players&nbsp;with tokens for engaging in battle for
+											land zones which are themselves valuable NFTs.
+										</p>
+									</div>
+									<div class="paragraph">
+										<p>
+											Additional characters and battle capacity can be developed to further grow a player’s ability to
+											exert influence in the game world. Battles happen between the&nbsp;“Bull” and “Bear” factions as
+											well as the “Hedge Fund” NPCs.
+										</p>
+									</div>
 								</div>
 								<a href="#" class="link-arrow whitepaper-content__link">
 									<span>View whitepaper</span>
@@ -297,19 +412,19 @@
 							<div class="col-12 col-md-5">
 								<div class="roadmap-content">
 									<ul class="roadmap-list">
-										<li data-date="" class="roadmap-list__item roadmap-list__item_active">
+										<li data-date="2021.11.10" class="roadmap-list__item">
 											<span class="roadmap-list__date">november 10th</span>
 											<span class="roadmap-list__event">Bloomy NFT Giveaway</span>
 										</li>
-										<li data-date="" class="roadmap-list__item">
+										<li data-date="2021.11.30" class="roadmap-list__item">
 											<span class="roadmap-list__date">november 30th</span>
 											<span class="roadmap-list__event">Listing on Secondary Market Main NFT Sale</span>
 										</li>
-										<li data-date="" class="roadmap-list__item">
+										<li data-date="2021.12.25" class="roadmap-list__item">
 											<span class="roadmap-list__date">december 25th</span>
 											<span class="roadmap-list__event">OccupyWallStreet Mini Game Launch</span>
 										</li>
-										<li data-date="" class="roadmap-list__item">
+										<li data-date="2022.01.15" class="roadmap-list__item">
 											<span class="roadmap-list__date">january 15th</span>
 											<span class="roadmap-list__event">IDO Token Sale</span>
 										</li>
@@ -321,7 +436,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- our team -->
 		<section id="team" class="team">
 			<div class="team-wrapper">
 				<div class="container">
@@ -363,55 +477,76 @@
 								</h2>
 							</div>
 							<div class="swiper-slide team-swiper__slide">
-								<img src="img/team/rockBOTTOM.png" srcset="img/team/rockBOTTOM.png 1x, img/team/rockBOTTOM@2x.png 2x"
-									alt="team member">
-								<p class="team-member__name">RockBottom</p>
-								<p class="team-member__note">
-									Keeps the community engaged and is in charge of marketing
-								</p>
+								<div class="team-swiper__block">
+									<img src="img/team/rockBOTTOM.png" srcset="img/team/rockBOTTOM.png 1x, img/team/rockBOTTOM@2x.png 2x"
+										alt="team member">
+									<p class="team-member__name">RockBottom</p>
+									<div class="team-member__note">
+										<p>
+											Keeps the community engaged and is in charge of marketing
+										</p>
+									</div>
+								</div>
 							</div>
 							<div class="swiper-slide team-swiper__slide">
-								<img src="img/team/Eudaimanic.png" srcset="img/team/Eudaimanic.png 1x, img/team/Eudaimanic@2x.png 2x"
-									alt="team member">
-								<p class="team-member__name">Eudaimanic</p>
-								<p class="team-member__note">
-									Oversees all the operations of the enterprise, enables solid partnerships and steers the ship to the
-									green zone.
-								</p>
+								<div class="team-swiper__block">
+									<img src="img/team/Eudaimanic.png" srcset="img/team/Eudaimanic.png 1x, img/team/Eudaimanic@2x.png 2x"
+										alt="team member">
+									<p class="team-member__name">Eudaimanic</p>
+									<div class="team-member__note">
+										<p>
+											Oversees all the operations of the enterprise, enables solid partnerships and steers the ship to
+											the green zone.
+										</p>
+									</div>
+								</div>
 							</div>
 							<div class="swiper-slide team-swiper__slide">
-								<img src="img/team/Trotsky.png" srcset="img/team/Trotsky.png 1x, img/team/Trotsky@2x.png 2x"
-									alt="team member">
-								<p class="team-member__name">Trotsky</p>
-								<p class="team-member__note">
-									Dope science fiction writer in charge of world creation and lore, delivers a realistic setting and
-									storyline for events unfold
-								</p>
+								<div class="team-swiper__block">
+									<img src="img/team/Trotsky.png" srcset="img/team/Trotsky.png 1x, img/team/Trotsky@2x.png 2x"
+										alt="team member">
+									<p class="team-member__name">Trotsky</p>
+									<div class="team-member__note">
+										<p>
+											Dope science fiction writer in charge of world creation and lore, delivers a realistic setting and
+											storyline for events unfold
+										</p>
+									</div>
+								</div>
 							</div>
 							<div class="swiper-slide team-swiper__slide">
-								<img src="img/team/TheAlgorist.png" srcset="img/team/TheAlgorist.png 1x, img/team/TheAlgorist@2x.png 2x"
-									alt="team member">
-								<p class="team-member__name">TheAlgorist</p>
-								<p class="team-member__note">
-									Takes care of the technology part and handles development
-								</p>
+								<div class="team-swiper__block">
+									<img src="img/team/TheAlgorist.png"
+										srcset="img/team/TheAlgorist.png 1x, img/team/TheAlgorist@2x.png 2x" alt="team member">
+									<p class="team-member__name">TheAlgorist</p>
+									<div class="team-member__note">
+										<p>Takes care of the technology part and handles development</p>
+									</div>
+								</div>
 							</div>
 							<div class="swiper-slide team-swiper__slide">
-								<img src="img/team/theLatin.png" srcset="img/team/theLatin.png 1x, img/team/theLatin@2x.png 2x"
-									alt="team member">
-								<p class="team-member__name">theLatin</p>
-								<p class="team-member__note">
-									Marketing specialist that helps to generate buzz
-								</p>
+								<div class="team-swiper__block">
+									<img src="img/team/theLatin.png" srcset="img/team/theLatin.png 1x, img/team/theLatin@2x.png 2x"
+										alt="team member">
+									<p class="team-member__name">theLatin</p>
+									<div class="team-member__note">
+										<p>Marketing specialist that helps to generate buzz</p>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="d-md-none swiper-button-prev"></div>
-						<div class="d-md-none swiper-button-next"></div>
+						<div class="team-swiper__navigation">
+							<div class="d-md-none swiper-button-prev">
+								<span></span>
+							</div>
+							<div class="d-md-none swiper-button-next">
+								<span></span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- our team -->
 	</main>
 	<!-- End main -->
 	<!-- Begin footer -->
@@ -422,24 +557,42 @@
 					<div class="row">
 						<div class="col-12 col-lg-6">
 							<a href="/" class="footer-logo">
-								<img src="./img/logos/logo.svg" alt="logo">
+								<img src="img/logos/logo.png" srcset="img/logos/logo.png 1x, img/logos/logo@2x.png 2x" alt="logo">
 							</a>
 						</div>
 						<div class="col-12 col-sm-6 col-lg-3">
 							<div class="footer-col">
-								<a href="#claim" class="link footer-col__link">Claim free NFT</a>
-								<a href="#story" class="link footer-col__link">Story</a>
-								<a href="#nft" class="link footer-col__link">NFT's</a>
-								<a href="#whitepaper" class="link footer-col__link">Whitepaper</a>
-								<a href="#roadmap" class="link footer-col__link">Roadmap</a>
-								<a href="#team" class="link footer-col__link">Team</a>
+								<a href="#claim" class="link footer-col__link">
+									<span data-hover="Claim free NFT">Claim free NFT</span>
+								</a>
+								<a href="#story" class="link footer-col__link">
+									<span data-hover="Story">Story</span>
+								</a>
+								<a href="#nft" class="link footer-col__link">
+									<span data-hover="NFT's">NFT's</span>
+								</a>
+								<a href="#whitepaper" class="link footer-col__link">
+									<span data-hover="Whitepaper">Whitepaper</span>
+								</a>
+								<a href="#roadmap" class="link footer-col__link">
+									<span data-hover="Roadmap">Roadmap</span>
+								</a>
+								<a href="#team" class="link footer-col__link">
+									<span data-hover="Team">Team</span>
+								</a>
 							</div>
 						</div>
 						<div class="col-12 col-sm-6 col-lg-3">
 							<div class="footer-col">
-								<a href="#" class="link footer-col__link">Join the community</a>
-								<a href="#" class="link link_underlined footer-col__link">Twitter</a>
-								<a href="#" class="link link_underlined footer-col__link">Discord</a>
+								<a href="#" class="link footer-col__link">
+									<span data-hover="Join the community">Join the community</span>
+								</a>
+								<a href="#" class="link link_underlined footer-col__link">
+									<span data-hover="Twitter">Twitter</span>
+								</a>
+								<a href="#" class="link link_underlined footer-col__link">
+									<span data-hover="Discord">Discord</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -457,17 +610,18 @@
 	<div class="menu">
 		<div class="menu-wrapper">
 			<nav class="menu-nav">
-				<a href="#claim" class="link menu-nav__link">Claim NFT</a>
-				<a href="#story" class="link menu-nav__link">Story</a>
-				<a href="#nft" class="link menu-nav__link">NFT's</a>
-				<a href="#whitepaper" class="link menu-nav__link">Whitepaper</a>
-				<a href="#roadmap" class="link menu-nav__link">Roadmap</a>
-				<a href="#team" class="link menu-nav__link">Team</a>
+				<a data-id="#claim" href="#claim" class="link menu-nav__link">Claim NFT</a>
+				<a data-id="#story" href="#story" class="link menu-nav__link">Story</a>
+				<a data-id="#nft" href="#nft" class="link menu-nav__link">NFT's</a>
+				<a data-id="#whitepaper" href="#whitepaper" class="link menu-nav__link">Whitepaper</a>
+				<a data-id="#roadmap" href="#roadmap" class="link menu-nav__link">Roadmap</a>
+				<a data-id="#team" href="#team" class="link menu-nav__link">Team</a>
 			</nav>
 		</div>
 	</div>
 	<!-- END MOBILE LAYOUT -->
 	<!-- BEGIN scripts -->
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<script src="js/application.js"></script>
 	<!-- END scripts -->
 </body>

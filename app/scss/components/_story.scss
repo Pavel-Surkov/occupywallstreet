@@ -2,11 +2,13 @@
 	& .container {
 		position: relative;
 		& svg:first-child {
+			pointer-events: none;
 			position: absolute;
 			top: 136px;
 			left: -90px;
 		}
 		& svg:nth-child(2) {
+			pointer-events: none;
 			position: absolute;
 			left: 510px;
 			top: 700px;
@@ -44,7 +46,7 @@
 		&__col {
 			max-width: calc(50% - 20px);
 		}
-		& p {
+		& .paragraph {
 			margin-bottom: 12px;
 			&:last-child {
 				margin-bottom: 0;
@@ -78,7 +80,7 @@
 	}
 }
 
-@media screen and (max-width: 1318px) {
+@media screen and (max-width: 1385px) {
 	.story {
 		& .container {
 			& svg:first-child {

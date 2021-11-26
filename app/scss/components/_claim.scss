@@ -2,6 +2,7 @@
 	& .container {
 		position: relative;
 		& svg:first-child {
+			pointer-events: none;
 			position: absolute;
 			top: 170px;
 			right: -80px;
@@ -25,7 +26,7 @@
 		&__text {
 			margin-top: 40px;
 			@include flex(row, flex-start, space-between);
-			& p {
+			& .paragraph {
 				max-width: calc(50% - 12px);
 			}
 		}
@@ -42,7 +43,7 @@
 	}
 }
 
-@media screen and (max-width: 1316px) {
+@media screen and (max-width: 1385px) {
 	.claim {
 		&-content {
 			&__title {
@@ -52,7 +53,7 @@
 			}
 			&__text {
 				display: block;
-				& p {
+				& .paragraph {
 					max-width: none;
 					margin-bottom: 16px;
 					&:last-child {

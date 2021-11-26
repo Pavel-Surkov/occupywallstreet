@@ -34,7 +34,7 @@
 			height: 2px;
 			width: 140px;
 			background-color: $green-400;
-			margin-bottom: 3px;
+			margin-bottom: 6px;
 			margin-left: 24px;
 			transition: 0.5s;
 			&::before,
@@ -110,7 +110,7 @@
 	}
 }
 
-@media screen and (max-width: 1316px) {
+@media screen and (max-width: 1385px) {
 	.link {
 		font-size: 1.4rem;
 		line-height: 1.57;

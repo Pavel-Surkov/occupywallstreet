@@ -1,11 +1,5 @@
 .join {
 	position: relative;
-	& svg:first-child {
-		position: absolute;
-		z-index: 1;
-		top: 0;
-		left: 0;
-	}
 	&::after {
 		content: '';
 		position: absolute;
@@ -20,13 +14,27 @@
 		padding: 240px 0;
 		padding-bottom: 282px;
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		&__text {
 			margin-top: 24px;
 			max-width: 758px;
 		}
 		&__link {
 			margin-top: 32px;
+		}
+		&__title {
+			position: relative;
+			z-index: 2;
+			&-wrapper {
+				position: relative;
+				& svg {
+					pointer-events: none;
+					position: absolute;
+					z-index: 1;
+					top: -300px;
+					left: -130px;
+				}
+			}
 		}
 	}
 }
@@ -42,12 +50,8 @@
 	}
 }
 
-@media screen and (max-width: 1316px) {
+@media screen and (max-width: 1385px) {
 	.join {
-		& svg:first-child {
-			left: 50px;
-			top: -20px;
-		}
 		&::after {
 			width: 750px;
 			height: 424px;
@@ -59,12 +63,6 @@
 
 @media screen and (max-width: 991px) {
 	.join {
-		& svg:first-child {
-			width: 500px;
-			height: 500px;
-			top: -60px;
-			left: 0;
-		}
 		&::after {
 			width: 800px;
 			height: 452px;
@@ -77,39 +75,46 @@
 			&__text {
 				margin-top: 16px;
 			}
+			&__title {
+				&-wrapper {
+					& svg {
+						width: 400px;
+						height: 400px;
+						top: -100px;
+						left: -100px;
+					}
+				}
+			}
 		}
 	}
 }
 
 @media screen and (max-width: 767px) {
 	.join {
-		& svg:first-child {
-			width: 400px;
-			height: 400px;
-			top: -60px;
-			left: 30px;
-			& circle {
-				fill-opacity: 0.22;
-			}
-		}
 		&::after {
 			width: 750px;
 			height: 424px;
 			right: -220px;
 			top: 320px;
 		}
+		&-content {
+			&__title {
+				&-wrapper {
+					& svg {
+						width: 350px;
+						height: 350px;
+						top: -90px;
+						left: -50px;
+						z-index: 2;
+					}
+				}
+			}
+		}
 	}
 }
 
 @media screen and (max-width: 576px) {
 	.join {
-		& svg:first-child {
-			width: 347px;
-			height: 347px;
-			top: -40px;
-			left: -25px;
-			z-index: 3;
-		}
 		&::after {
 			width: 541px;
 			height: 306px;
